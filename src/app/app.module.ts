@@ -8,12 +8,16 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { ChartComponent } from './chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
+import { PageViewChartComponent } from './page-view-chart/page-view-chart.component';
+import { UniqueUserChartComponent } from './unique-user-chart/unique-user-chart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartComponent
+    ChartComponent,
+    PageViewChartComponent,
+    UniqueUserChartComponent
   ],
   imports: [
     BrowserModule,

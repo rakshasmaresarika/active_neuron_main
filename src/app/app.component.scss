@@ -5,7 +5,7 @@
         div{
             padding: 5px;
             // background-color: aquamarine;
-            height: 90%;
+            height: 76%;
             .row{
                 height: 50%;
             }
@@ -67,7 +67,7 @@
 .sale-overview{
     height: 400px;
     .col div{
-        // background-color: rgb(252, 241, 175);
+        // background-color: rgb(149, 135, 252);
         padding-top: 10px;
         height: 95%;
     }
@@ -77,4 +77,7 @@
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
+}
+.col-3 .shadow{
+
 }

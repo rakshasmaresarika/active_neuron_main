@@ -1,0 +1,12 @@
+.main-container{
+    display: flex;
+    height: 98%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sales-heading{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}

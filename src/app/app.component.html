@@ -14,33 +14,26 @@
     <div class="col-3">
       <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
         <div class="row">
-          <div class="col data">92.4K <br><small>Page Views</small></div>
+          <div class="col data"><span class="fs-5">92.4K</span><br><small>Page Views</small></div>
           <div class="col img"><span class="material-symbols-outlined">
             pageview
             </span></div>
         </div>
-        <div class="row">
-          <div style="display: block;">
-            <canvas baseChart width="95%" height="95%"
-              [type]="'line'"
-              [data]="lineChartData"
-              [options]="lineChartOptions"
-              [legend]="lineChartLegend">
-            </canvas>
-          </div>
+        <div class="row p-0">
+          <app-page-view-chart></app-page-view-chart>
         </div>
       </div>
     </div>
     <div class="col-3">
       <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
         <div class="row">
-          <div class="col data">67.2K <br><small>Unique User</small></div>
+          <div class="col data"><span class="fs-5">67.2K</span><br><small>Unique Users</small></div>
           <div class="col img"><span class="material-symbols-outlined">
             group
             </span></div>
         </div>
-        <div class="row">
-          Data
+        <div class="row p-0">
+          <app-unique-user-chart></app-unique-user-chart>
         </div>
       </div>
     </div>
@@ -55,6 +48,13 @@
     </div>
     <div class="col-6">
       <div class="mat-elevation-z8">
+        <span class="sales-heading px-3">
+          <div><h6>User and Session Analytics</h6></div>
+          <div >
+            <span class="material-symbols-outlined">cloud_download</span>
+            <span class="material-symbols-outlined">more_horiz</span>
+          </div>
+        </span>
           <table mat-table [dataSource]="dataSource">
         
             <!-- Position Column -->
@@ -96,7 +96,7 @@
   <div class="row cards">
     <div class="col">
       <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-        <p><span class="material-symbols-outlined">
+        <p><span class="material-symbols-outlined text-primary">
           group
           </span></p>
         <h4>67.4K</h4>
@@ -108,7 +108,7 @@
     </div>
     <div class="col">
       <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-        <p><span class="material-symbols-outlined">
+        <p><span class="material-symbols-outlined text-warning">
           pageview
           </span></p>
         <h4>96.2K</h4>
@@ -120,7 +120,7 @@
     </div>
     <div class="col">
       <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-        <p><span class="material-symbols-outlined">
+        <p><span class="material-symbols-outlined text-danger">
           cloud_off
           </span></p>
         <h4>6.92%</h4>
@@ -132,7 +132,7 @@
     </div>
     <div class="col">
       <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-        <p><span class="material-symbols-outlined">
+        <p><span class="material-symbols-outlined text-success">
           timer
           </span></p>
         <h4>16m 48s</h4>
@@ -148,7 +148,7 @@
     <div class="col">
       <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
         <span class="sales-heading">
-          <div >Sales Overview</div>
+          <div><h6>Sales Overview</h6></div>
           <div >
             <span class="material-symbols-outlined">cloud_download</span>
             <span class="material-symbols-outlined">more_horiz</span>

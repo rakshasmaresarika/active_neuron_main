@@ -1,3 +1,23 @@
+
+<div class="d-flex main-container">
+    <span class="sales-heading">
+        <div><h6>User and Session Analytics</h6></div>
+        <div >
+          <span class="material-symbols-outlined">cloud_download</span>
+          <span class="material-symbols-outlined">more_horiz</span>
+        </div>
+      </span>
+    <!-- <div><h6>User and Session Analytics</h6></div> -->
+    <div style="display: block;">
+        <canvas baseChart width="600" height="250"
+          [type]="'line'"
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend">
+        </canvas>
+    </div>
+</div>
+
 <!-- <div class="container">
 
     <div style="width:50%;">
@@ -26,3 +46,4 @@
 <!-- [plugins]="'lineChartPlugins'" -->
 <!-- [chartType]="'lineChartType'" -->
 <!-- [colors]="lineChartColors" -->
+<!-- [box]="box"> -->

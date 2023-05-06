@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChartDataset, ChartOptions, Color } from 'chart.js';
+import { ChartConfiguration, ChartDataset, ChartOptions, Color } from 'chart.js';
 import { Chart, registerables } from 'chart.js';
 // import {  } from "ng2-charts";
 @Component({
@@ -43,18 +43,43 @@ export class ChartComponent implements OnInit{
     //     });
     // }
 
-    public lineChartData: ChartDataset[] = [
-        { data: [], label: "series 1"},
-        { data: [], label: "series 1"},
-    ]
-    public lineChartLabels: any [] =[
-        "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "aug", "nov", "dec"
-    ]
+    public lineChartData: ChartConfiguration<'line'>['data'] = {
+      labels: [
+        '25 Apr',
+        '26 Apr',
+        '27 Apr',
+        '28 Apr',
+        '29 Apr',
+        '30 Apr',
+        '01 may',
+        '02 may',
+        '03 may',
+        '04 may',
+        '05 may',
+      ],
+      datasets: [
+        {
+          data: [ 0, 55, 270, 111, 56, 55, 446, 108, 160, 275, 45, 30, 65, 80, 50, 10, 305, 155, 0],
+          label: 'Users',
+          fill: true,
+          tension: 0.5,
+          borderColor: 'blue',
+          backgroundColor: 'rgb(149, 135, 252)'
+        },
+        {
+          data: [ 0, 155, 470, 111, 56, 95, 246, 408, 160, 275, 45, 50, 165, 280, 50, 10, 200, 145, 90],
+          label: 'Seasons',
+          fill: true,
+          tension: 0.5,
+          borderColor: '#fdb20e',
+          backgroundColor: 'rgb(253, 208, 109)'
+        }
+      ],
+      
+    };
     public lineChartOptions: ChartOptions<'line'> = {
-        responsive: true
-      };
-    public lineChartLegend = true;
-    public lineChartColors: Color[] = ["red", "blue"]
-    // public lineChartType = "line"
+      responsive: false
+    };
+    public lineChartLegend = false;
 
 }
